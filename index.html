@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script>
+  function httpGet()
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", "https://api.bitfinex.com/v1/pubticker/btcusd", false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+    document.getElementById("mySpanId").innerHTML = xmlHttp.responseText;
+}
+  </script>
 <title>Page Title</title>
 </head>
 <body>
-
+ <button type="submit" onclick="show_element();">show</button>
 <h1>My First Heading</h1>
-<p>My first paragraph.</p>
+<p Id="mySpanId">My first paragraph.</p>
 
 </body>
 </html>

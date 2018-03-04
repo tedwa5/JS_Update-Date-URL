@@ -13,10 +13,10 @@ function hours(){
   d = new Date();
   hour = d.getHours();
   minute = d.getMinutes();
-  hour = '0' + hour.toString();
+  hour = '0' + hour.toString(); //another solution hour = (hour < 10) ? '0' + hour : hour.toString();
   hour = hour.split('').reverse().join('').substr(0,2).split('').reverse().join('');
-  minute = '0' + minute.toString();
-  minute = minute.split('').reverse().join('').substr(0,2).split('').reverse().join('');
+  minute = '0' + minute.toString(); 
+  minute = minute.split('').reverse().join('').substr(0,2).split('').reverse().join(''); 
   time = Number(hour + minute);
   if (time >= 0000 && time < 1200)
   {

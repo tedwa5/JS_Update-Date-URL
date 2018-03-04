@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="root"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
+<script type="text/babel">
+function api() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var json = JSON.parse(this.responseText);
+        var price = json.result.XETHZEUR.a;
+        return price;
+    }
+  };
+  xhttp.open("GET", "https://api.kraken.com/0/public/Ticker?pair=XETHZEUR", true)
+  xhttp.send();
+}
+
+ReactDOM.render(
+    <p>{api()}</p>,
+    document.getElementById('root')
+);
+</script>
+
+</body>
+</html> 

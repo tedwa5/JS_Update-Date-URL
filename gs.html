@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div>
+<p>Please input your search terms:</p>
+
+<input id="terms">
+<p>Please input number:</p>
+
+<input id="number">
+
+<button type="button" onclick="api()">Submit</button>
+
+<p id="show"></p>
+<ul id = 'list'>Urls:</ul>
+<ul id = 'images'>Images:</ul>
+</div>
+<script>
+function api()
+{
+  var xhttp = new XMLHttpRequest();
+  var search = '?search=' + document.getElementById("terms").value;
+  var start = '&start=' + document.getElementById("number").value;
+  var ul = document.getElementById("list");
+  var ul2 = document.getElementById("images");
+  xhttp.onreadystatechange = function()
+  {
+    if (this.readyState == 4 && this.status == 200)
+    {
+        var json = JSON.parse(this.responseText)
+        var data = json.url
+        var links = json.links
+        var images = json.images
+      document.getElementById("show").innerHTML = data;
+      var elements = document.getElementsByClassName('l');
+      if (elements)
+      {
+        while(elements.length > 0)
+        {
+        elements[0].parentNode.removeChild(elements[0]);
+        }
+      }
+    for (var i = 0; i < links.length; i++ )
+      {
+        li = document.createElement("li");
+        li.className = 'l';
+        var a = document.createElement('a');
+        a.setAttribute('href', links[i][0]);
+        a.innerHTML = links[i][1];
+        if (links[i][1] == '' || links[i][1] == '\n\n')
+        {
+            a.innerHTML = 'EMPTY';
+        }
+        li.appendChild(a);
+        ul.appendChild(li);
+      }
+    for (var i = 0; i < images.length; i++ )
+      {
+        li = document.createElement("li");
+        var img = document.createElement('img');
+        img.src = images[i][0];
+        img.height = 100;
+        li.className = 'l';
+        li.appendChild(img);
+        ul2.appendChild(li);
+      }
+    };
+  };
+  var url = 'http://www.baralaboratory.com/api/v1/link'+ search.replace(' ','+') + start;
+  xhttp.open("GET", url, true);
+  xhttp.send()
+}
+</script>
+</body>

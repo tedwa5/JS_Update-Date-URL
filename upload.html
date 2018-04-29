@@ -76,14 +76,14 @@ var ctx2 = c2.getContext("2d");
         
       for(i = 0; i < averages.length; i++)
           {
-            msData.push([i*(400/ms.length), (ms[i]*(280/msMax))])
+            msData.push([i, (ms[i]*(280/msMax))]) // also instead of  i * (400/msData.length)
         }
       console.log(msData);
       console.log(averages.length, min, max);
       var data = [];
       for(i = 0; i < averages.length; i++)
         {
-            data.push([i, (averages[i]*(280/max))]) // also instead of  i * (400/msData.length
+            data.push([i*(400/averages.length), (averages[i]*(280/max))]) 
         }
      x = 0;
      for(i = 0; i < data.length; i++)

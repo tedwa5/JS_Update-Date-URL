@@ -67,7 +67,7 @@ var ctx = c.getContext("2d");
       var min = Math.min.apply(null, averages);
       var max = Math.max.apply(null, averages);
       var ind = averages.indexOf(max);
-      var ms = lines[ind].slice(3).map(number);
+      var ms = lines[ind].slice(3).map(Number);
       var msMax = Math.max.apply(null, ms);
       var msData = [];
         

@@ -70,7 +70,7 @@ var ctx2 = c2.getContext("2d");
       var min = Math.min.apply(null, averages);
       var max = Math.max.apply(null, averages);
       var ind = averages.indexOf(max);
-      var ms = lines[ind].split(";").slice(3).map(Number);
+      var ms = lines[ind].split(";").slice(3, 650).map(Number);
       var msMax = Math.max.apply(null, ms);
       var msData = [];
         

@@ -83,7 +83,7 @@ var ctx2 = c2.getContext("2d");
       var data = [];
       for(i = 0; i < averages.length; i++)
         {
-            data.push([i, (averages[i]*(280/max))])
+            data.push([i, (averages[i]*(280/max))]) // also instead of  i * (400/msData.length
         }
      x = 0;
      for(i = 0; i < data.length; i++)
@@ -96,7 +96,7 @@ var ctx2 = c2.getContext("2d");
       
     ctx.strokeStyle = '#ff0000';
     ctx.stroke();
-    for(i = 0; i < 400; i++)
+    for(i = 0; i < 400; i++) // instead of 400 msData.length
         {
             ctx2.moveTo(msData[i][0], 300);
             ctx2.lineTo(msData[i][0],300 - msData[i][1]);

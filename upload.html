@@ -98,8 +98,8 @@ var ctx2 = c2.getContext("2d");
     ctx.stroke();
     for(i = 0; i < msData.length; i++)
         {
-            ctx2.moveTo(msData[i][0], 100);
-            ctx2.lineTo(msData[i][0],msData[i][1]);
+            ctx2.moveTo(msData[i][0], 300);
+            ctx2.lineTo(msData[i][0],300 - msData[i][1]);
             /*ctx.arc(data[i][0], 300 -(data[i][1]),0.01,0,2*Math.PI);
             ctx.fillStyle = "red";
             ctx.fill();*/

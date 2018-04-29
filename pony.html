@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html>
 <body>
-<p id="txt"><p>
-<svg height="1000" width="1000">
+<svg height="500" width="1000">
   <image id="move" xlink:href="https://m.media-amazon.com/images/S/aplus-media/sota/1c4d6642-dd6f-44b9-9900-bff32eb889ad.jpg" x="0" y="0" height="50px" width="50px"/>
   Sorry, your browser does not support inline SVG.
-</svg>
+</svg> 
 <script>
 function around()
-{     var x = Math.floor((Math.random() * 10) + 1);
-	  var pony = document.getElementById("move");
+{     var x = Math.floor((Math.random() * 10) + 1); //generating random number between  1 - 10
+      var pony = document.getElementById("move"); 
       var ponyX =  Number(pony.getAttribute('x'));
       var ponyY =  Number(pony.getAttribute('y'));
-      document.getElementById("txt").innerHTML = ponyY;
-	  document.getElementById("move").setAttribute("x", ponyX +x);
-      var y = Math.floor((Math.random() * 10) + 1);
+      document.getElementById("move").setAttribute("x", ponyX +x);
+      var y = Math.floor((Math.random() * 5) + 1);
 	  document.getElementById("move").setAttribute("y",ponyY + y);
-      if (ponyY > 980)
+      if (ponyY > 480)               //this return pony if goes far away on ax Y
       { document.getElementById("move").setAttribute("y", 0);
       }
-      if (ponyX > 980)
+      if (ponyX > 980)  //this returns pony on start if he goes far away on ax x
       { document.getElementById("move").setAttribute("x", 0);
       }
       

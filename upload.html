@@ -66,7 +66,17 @@ var ctx = c.getContext("2d");
       };
       var min = Math.min.apply(null, averages);
       var max = Math.max.apply(null, averages);
-      console.log(averages.length, min, max)
+      var ind = averages.indexOf(max);
+      var ms = lines[ind].slice(3).map(number);
+      var msMax = Math.max.apply(null, ms);
+      var msData = [];
+        
+      for(i = 0; i < averages.length; i++)
+          {
+            msData.push([i*(400/ms.length), (ms[i]*(280/msMax))])
+        }
+      console.log(msData);
+      console.log(averages.length, min, max);
       var data = [];
       for(i = 0; i < averages.length; i++)
         {

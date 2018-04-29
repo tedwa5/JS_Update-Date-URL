@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <body>
-<svg height="500" width="1000" style="border: 10px blue;">
-  <image id="move" xlink:href="https://m.media-amazon.com/images/S/aplus-media/sota/1c4d6642-dd6f-44b9-9900-bff32eb889ad.jpg" x="0" y="0" height="50px" width="50px"/>
+<svg height="500" width="1000" style="border: 10px solid black;;">
+  <image id="move" xlink:href="https://m.media-amazon.com/images/S/aplus-media/sota/1c4d6642-dd6f-44b9-9900-bff32eb889ad.jpg" x="0" y="240" height="20px" width="50px"/>
   Sorry, your browser does not support inline SVG.
 </svg> 
 <script>
@@ -12,7 +12,7 @@ function around()
       var ponyX =  Number(pony.getAttribute('x'));
       var ponyY =  Number(pony.getAttribute('y'));
       document.getElementById("move").setAttribute("x", ponyX +x);
-      var y = Math.floor((Math.random() * 5) + 1);
+      var y = Math.floor((Math.random() * 5)-2.5);
 	  document.getElementById("move").setAttribute("y",ponyY + y);
       if (ponyY > 490)               //this return pony if goes far away on ax Y
       { document.getElementById("move").setAttribute("y", 0);

@@ -2,7 +2,7 @@
 <html>
 <body>
 <svg height="500" width="1000" style="border: 10px solid black;;">
-  <image id="move" xlink:href="https://m.media-amazon.com/images/S/aplus-media/sota/1c4d6642-dd6f-44b9-9900-bff32eb889ad.jpg" x="0" y="240" height="20px" width="50px"/>
+  <image id="move" xlink:href="https://m.media-amazon.com/images/S/aplus-media/sota/1c4d6642-dd6f-44b9-9900-bff32eb889ad.jpg" x="0" y="225" height="50px" width="50px"/>
   Sorry, your browser does not support inline SVG.
 </svg> 
 <script>
@@ -15,12 +15,12 @@ function around()
       var y = Math.floor((Math.random() * 5)-2.5);
 	  document.getElementById("move").setAttribute("y",ponyY + y);
       if (ponyY > 490)               //this return pony if goes far away on ax Y
-      { document.getElementById("move").setAttribute("y", 0);
+      { document.getElementById("move").setAttribute("y", 240);
        document.getElementById("move").setAttribute("x", 0);
       }
       if (ponyX > 990)  //this returns pony on start if he goes far away on ax x
       { document.getElementById("move").setAttribute("x", 0);
-       document.getElementById("move").setAttribute("y", 0);
+       document.getElementById("move").setAttribute("y", 240);
       }
       
 }

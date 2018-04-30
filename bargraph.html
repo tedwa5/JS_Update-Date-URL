@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="240" height="190" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.fillStyle="#592A71"
+ctx.font = "15px Arial";
+ctx.fillText("4", 30, 188);
+ctx.fillRect(10, 170 - (3*39.9), 20, 3*39.9);
+ctx.fillStyle="#AAAA39"
+ctx.fillRect(30, 170 - (3*45.4), 20, 3*45.4);
+ctx.fillStyle="#592A71"
+ctx.fillText("5", 75, 188);
+ctx.fillRect(55, 170 - (3*27.7), 20, 3*27.7);
+ctx.fillStyle="#AAAA39"
+ctx.fillRect(75, 170 - (3*31.5), 20, 3*31.5);
+ctx.fillStyle="#592A71"
+ctx.fillText("6", 120, 188);
+ctx.fillRect(100, 170 - (3*18.2), 20, 3*18.2);
+ctx.fillStyle="#AAAA39"
+ctx.fillRect(120, 170 - (3*15.1), 20, 3*15.1);
+ctx.fillStyle="#592A71"
+ctx.fillText("7", 165, 188);
+ctx.fillRect(145, 170 - (3*9.5), 20, 3*9.5);
+ctx.fillStyle="#AAAA39"
+ctx.fillRect(165, 170 - (3*5.8), 20, 3*5.8);
+ctx.fillStyle="#592A71"
+ctx.fillText("8", 210, 188);
+ctx.fillRect(190, 170 - (3*4.3), 20, 3*4.3);
+ctx.fillStyle="#AAAA39"
+ctx.fillRect(210, 170 - (3*1.5), 20, 3*1.5);
+ctx.fillStyle="#592A71"
+ctx.fillRect(120, 30, 20, 20);
+ctx.fillText("GGMOS1", 145, 45);
+ctx.fillStyle="#AAAA39"
+ctx.fillText("GGMOS2", 145, 70);
+ctx.fillRect(120, 55, 20, 20);
+ctx.beginPath();
+ctx.moveTo(0,170);
+ctx.lineTo(5,170);
+ctx.moveTo(0,140);
+ctx.lineTo(5,140);
+ctx.moveTo(0,110);
+ctx.lineTo(5,110);
+ctx.moveTo(0,80);
+ctx.lineTo(5,80);
+ctx.moveTo(0,50);
+ctx.lineTo(5,50);
+ctx.moveTo(0,20);
+ctx.lineTo(5,20);
+ctx.stroke();
+
+
+</script>
+</body>
+</html>

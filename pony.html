@@ -14,18 +14,22 @@ function around()
       document.getElementById("move").setAttribute("x", ponyX +x);
       var y = Math.floor((Math.random() * 5)-2.5);
 	  document.getElementById("move").setAttribute("y",ponyY + y);
-       if (ponyY > 470 || ponyX > 970)               //pony explodes :D
+       if (ponyY > 450 || ponyX > 950)               //pony explodes :D
       { 
        document.getElementById("move").setAttribute("xlink:href", 
-						    "https://png.pngtree.com/element_pic/16/12/06/7f9be0c937678ea3c2ef1c043ce128b7.jpg");
+						    "http://pngimg.com/uploads/explosion/explosion_PNG15401.png");
       }
       if (ponyY > 490)               //this return pony if goes far away on ax Y
       { document.getElementById("move").setAttribute("y", 240);
        document.getElementById("move").setAttribute("x", 0);
+       document.getElementById("move").setAttribute("xlink:href", 
+						    "https://m.media-amazon.com/images/S/aplus-media/sota/1c4d6642-dd6f-44b9-9900-bff32eb889ad.jpg");
       }
       if (ponyX > 990)  //this returns pony on start if he goes far away on ax x
       { document.getElementById("move").setAttribute("x", 0);
        document.getElementById("move").setAttribute("y", 240);
+       document.getElementById("move").setAttribute("xlink:href", 
+						    "https://m.media-amazon.com/images/S/aplus-media/sota/1c4d6642-dd6f-44b9-9900-bff32eb889ad.jpg");
       }
       
 }

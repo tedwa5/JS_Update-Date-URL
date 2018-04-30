@@ -20,11 +20,11 @@ div{
       <p><input type=file name=file>
     </form>
 <div>
-<canvas id="myCanvas" width="400" height="300" style="border:1px solid #d3d3d3;">
+<canvas id="myCanvas" width="400" height="300" style="border:1px solid #28296d;">
 Your browser does not support the HTML5 canvas tag.</canvas>
 </div>
 <div>
-<canvas id="myCanvas2" width="400" height="300" style="border:1px solid #d3d3d3;">
+<canvas id="myCanvas2" width="400" height="300" style="border:1px solid #28296d;">
 Your browser does not support the HTML5 canvas tag.</canvas>
 </div>
 
@@ -74,9 +74,9 @@ var ctx2 = c2.getContext("2d");
       var msMax = Math.max.apply(null, ms);
       var msData = [];
         
-      for(i = 0; i < ms.length; i++)
+      for(i = 0; i < 300; i++)
           {
-            msData.push([i * (400/msData.length), (ms[i]*(280/msMax))]) // also instead of  i * (400/msData.length)
+            msData.push([i, (ms[i]*(280/msMax))]) // also instead of  i * (400/msData.length)
         }
       console.log(msData);
       console.log(averages.length, min, max);
@@ -94,9 +94,9 @@ var ctx2 = c2.getContext("2d");
             ctx.fill();*/
         }
       
-    ctx.strokeStyle = '#ff0000';
+    ctx.strokeStyle = '#2022a3';
     ctx.stroke();
-    for(i = 0; i < 400; i++) // instead of 400 msData.length
+    for(i = 0; i < 300; i++) // instead of 400 msData.length
         {
             ctx2.moveTo(msData[i][0], 300);
             ctx2.lineTo(msData[i][0],300 - msData[i][1]);

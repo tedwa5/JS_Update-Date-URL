@@ -2,61 +2,65 @@
 <html>
 <body>
 
-<canvas id="myCanvas" width="240" height="190" style="border:1px solid #d3d3d3;">
+<canvas id="myCanvas" width="720" height="570" style="border:1px solid #d3d3d3;">
 Your browser does not support the HTML5 canvas tag.</canvas>
 
 <script>
-
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.fillStyle="#592A71"
-ctx.font = "15px Arial";
-ctx.fillText("4", 30, 188);
-ctx.fillRect(10, 170 - (3*39.9), 20, 3*39.9);
+ctx.font = "45px Arial";
+//first two rectangles
+ctx.fillText("4", 90, 564);
+ctx.fillRect(30, 510 - (9*39.9), 60, 9*39.9);
 ctx.fillStyle="#AAAA39"
-ctx.fillRect(30, 170 - (3*45.4), 20, 3*45.4);
+ctx.fillRect(90, 510 - (9*45.4), 60, 9*45.4);
+// second two rectangles
 ctx.fillStyle="#592A71"
-ctx.fillText("5", 75, 188);
-ctx.fillRect(55, 170 - (3*27.7), 20, 3*27.7);
+ctx.fillText("5", 230, 564);
+ctx.fillRect(170, 510 - (9*27.7), 60, 9*27.7);
 ctx.fillStyle="#AAAA39"
-ctx.fillRect(75, 170 - (3*31.5), 20, 3*31.5);
+ctx.fillRect(230, 510 - (9*31.5), 60, 9*31.5);
+// third two rectangles
 ctx.fillStyle="#592A71"
-ctx.fillText("6", 120, 188);
-ctx.fillRect(100, 170 - (3*18.2), 20, 3*18.2);
+ctx.fillText("6", 360, 564);
+ctx.fillRect(305, 510 - (9*18.2), 60, 9*18.2);
 ctx.fillStyle="#AAAA39"
-ctx.fillRect(120, 170 - (3*15.1), 20, 3*15.1);
+ctx.fillRect(365, 510 - (9*15.1), 60, 9*15.1);
+// forth two rectangles
 ctx.fillStyle="#592A71"
-ctx.fillText("7", 165, 188);
-ctx.fillRect(145, 170 - (3*9.5), 20, 3*9.5);
+ctx.fillText("7", 495, 564);
+ctx.fillRect(440, 510 - (9*9.5), 60, 9*9.5);
 ctx.fillStyle="#AAAA39"
-ctx.fillRect(165, 170 - (3*5.8), 20, 3*5.8);
+ctx.fillRect(500, 510 - (9*5.8), 60, 9*5.8);
+// fifth two rectangles
 ctx.fillStyle="#592A71"
-ctx.fillText("8", 210, 188);
-ctx.fillRect(190, 170 - (3*4.3), 20, 3*4.3);
+ctx.fillText("8", 640, 564);
+ctx.fillRect(575, 510 - (9*4.3), 60, 9*4.3);
 ctx.fillStyle="#AAAA39"
-ctx.fillRect(210, 170 - (3*1.5), 20, 3*1.5);
+ctx.fillRect(635, 510 - (9*1.5), 60, 9*1.5);
+// label colors
 ctx.fillStyle="#592A71"
-ctx.fillRect(120, 30, 20, 20);
-ctx.fillText("GGMOS1", 145, 45);
+ctx.fillRect(360, 90, 60, 60);
+ctx.fillText("GGMOS1", 435, 135);
 ctx.fillStyle="#AAAA39"
-ctx.fillText("GGMOS2", 145, 70);
-ctx.fillRect(120, 55, 20, 20);
+ctx.fillText("GGMOS2", 435, 210);
+ctx.fillRect(360, 165, 60, 60);
+// y axis
 ctx.beginPath();
-ctx.moveTo(0,170);
-ctx.lineTo(5,170);
-ctx.moveTo(0,140);
-ctx.lineTo(5,140);
-ctx.moveTo(0,110);
-ctx.lineTo(5,110);
-ctx.moveTo(0,80);
-ctx.lineTo(5,80);
-ctx.moveTo(0,50);
-ctx.lineTo(5,50);
-ctx.moveTo(0,20);
-ctx.lineTo(5,20);
+ctx.moveTo(0,510);
+ctx.lineTo(15,510);
+ctx.moveTo(0,420);
+ctx.lineTo(15,420);
+ctx.moveTo(0,330);
+ctx.lineTo(15,330);
+ctx.moveTo(0,240);
+ctx.lineTo(15,240);
+ctx.moveTo(0,150);
+ctx.lineTo(15,150);
+ctx.moveTo(0,60);
+ctx.lineTo(15,60);
 ctx.stroke();
-
-
 </script>
 </body>
 </html>

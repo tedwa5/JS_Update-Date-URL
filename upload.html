@@ -76,7 +76,7 @@ var ctx2 = c2.getContext("2d");
         
       for(i = 0; i < 200; i++)
           {
-            msData.push([i*2, (ms[i]*(280/msMax))]) // also instead of  i * (400/msData.length)
+            msData.push([i*2, 1.5*(ms[i]*(280/msMax))]) // also instead of  i * (400/msData.length)
         }
       console.log(msData);
       console.log(averages.length, min, max);

@@ -74,9 +74,9 @@ var ctx2 = c2.getContext("2d");
       var msMax = Math.max.apply(null, ms);
       var msData = [];
         
-      for(i = 0; i < 150; i++)
+      for(i = 0; i < 200; i++)
           {
-            msData.push([i*3, (ms[i]*(280/msMax))]) // also instead of  i * (400/msData.length)
+            msData.push([i*2, (ms[i]*(280/msMax))]) // also instead of  i * (400/msData.length)
         }
       console.log(msData);
       console.log(averages.length, min, max);

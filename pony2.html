@@ -35,8 +35,11 @@ window.addEventListener('keydown', function(event)
 	}
 }, true)
    
-function explode(ponyY, ponyX)
-{
+function explode()
+{     
+	var pony = document.getElementById("move"); 
+      var ponyX =  Number(pony.getAttribute('x'));
+      var ponyY =  Number(pony.getAttribute('y'));
 	if ( ponyY > 475 || ponyX > 975)               //pony explodes :D
       { 
        document.getElementById("move").setAttribute("xlink:href", 
@@ -55,6 +58,7 @@ function explode(ponyY, ponyX)
 						    "https://m.media-amazon.com/images/S/aplus-media/sota/1c4d6642-dd6f-44b9-9900-bff32eb889ad.jpg");
       }
 }
+//var explosion = setInterval(around, 10);	
 </script>
 </body>
 </html>

@@ -56,7 +56,27 @@ function explode()
 						    "https://m.media-amazon.com/images/S/aplus-media/sota/1c4d6642-dd6f-44b9-9900-bff32eb889ad.jpg");
       }
 }
-var explosion = setInterval(explode, 10);	
+	
+function shitgenerator()
+	{
+	var random = Math.floor(Math.random() * 10);
+	var randomY = Math.floor((Math.random() + 25) * 475);
+	var randomX = Math.floor((Math.random() + 25) * 975);
+	if (random == 1)
+	{
+	var svg = document.getElementsByTagName('svg')[0]; 
+	var svgimg = document.createElementNS('http://www.w3.org/2000/svg','image');
+	svgimg.setAttributeNS(null,'height','30');
+	svgimg.setAttributeNS(null,'width','30');
+	svgimg.setAttributeNS('http://www.w3.org/1999/xlink','href', 'https://cdn3.iconfinder.com/data/icons/object-emoji/50/Poop-512.png');
+	svgimg.setAttributeNS(null,'x',randomX);
+	svgimg.setAttributeNS(null,'y','randomY);
+	svgimg.setAttributeNS(null, 'visibility', 'visible');
+	svg.appendChild(svgimg);
+
+	}
+var explosion = setInterval(explode, 10);
+var shitplosion = setInterval(explode, 10);
 </script>
 </body>
 </html>

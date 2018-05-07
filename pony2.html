@@ -9,11 +9,32 @@
 </svg> 
 </div>
 <script>
+function explode(ponyY, ponyX)
+{
+	if ( 25 > ponyY > 475 || 25 > ponyX > 975)               //pony explodes :D
+      { 
+       document.getElementById("move").setAttribute("xlink:href", 
+						    "http://pngimg.com/uploads/explosion/explosion_PNG15401.png");
+      }
+      if (25 > ponyY > 475)               //this return pony if goes far away on ax Y
+      { document.getElementById("move").setAttribute("y", 475);
+       document.getElementById("move").setAttribute("x", 225);
+       document.getElementById("move").setAttribute("xlink:href", 
+						    "https://m.media-amazon.com/images/S/aplus-media/sota/1c4d6642-dd6f-44b9-9900-bff32eb889ad.jpg");
+      }
+      if (25 > ponyX > 975)  //this returns pony on start if he goes far away on ax x
+      { document.getElementById("move").setAttribute("x", 475);
+       document.getElementById("move").setAttribute("y", 225);
+       document.getElementById("move").setAttribute("xlink:href", 
+						    "https://m.media-amazon.com/images/S/aplus-media/sota/1c4d6642-dd6f-44b9-9900-bff32eb889ad.jpg");
+      }
+}
 window.addEventListener('keydown', function(event)
 {
 	var pony = document.getElementById("move"); 
       var ponyX =  Number(pony.getAttribute('x'));
       var ponyY =  Number(pony.getAttribute('y'));
+	explode(ponyY, ponyX);
        var key = event.keyCode;
 	 console.log(key);
 	switch (key) 

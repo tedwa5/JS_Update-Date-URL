@@ -16,16 +16,16 @@ window.addEventListener('keydown', function(event)
 	switch (key) 
       {
     case 65:
-        document.getElementById("move").setAttribute("x", ponyX + 10)
-        break;
-    case 68:
         document.getElementById("move").setAttribute("x", ponyX - 10)
         break;
+    case 68:
+        document.getElementById("move").setAttribute("x", ponyX + 10)
+        break;
     case 87:
-        document.getElementById("move").setAttribute("y", ponyY + 10)
+        document.getElementById("move").setAttribute("y", ponyY - 10)
         break;
     case 83:
-        document.getElementById("move").setAttribute("y", ponyY - 10)
+        document.getElementById("move").setAttribute("y", ponyY + 10)
         break;
 	}
 }, true)

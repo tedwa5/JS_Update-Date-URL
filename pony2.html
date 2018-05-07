@@ -39,6 +39,7 @@ function explode()
 	var pony = document.getElementById("move"); 
       var ponyX =  Number(pony.getAttribute('x'));
       var ponyY =  Number(pony.getAttribute('y'));
+	explosion();
 	if ( 25 > ponyY || ponyY > 475 || 25 > ponyX || ponyX > 975)               //pony explodes :D
       { 
        document.getElementById("move").setAttribute("xlink:href", 
@@ -57,7 +58,7 @@ function explode()
 						    "https://m.media-amazon.com/images/S/aplus-media/sota/1c4d6642-dd6f-44b9-9900-bff32eb889ad.jpg");
       }
 }
-var explosion = setInterval(explode, 10);	
+// var explosion = setInterval(explode, 10);	
 </script>
 </body>
 </html>

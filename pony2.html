@@ -6,22 +6,22 @@
   Sorry, your browser does not support inline SVG.
 </svg> 
 <script>
-window.addEventListener('keydown', move(event)
+window.addEventListener('keydown', function(event)
 {
        var key = event.keyCode;
 	 console.log(key);
 	switch (key) 
       {
-    case "ArrowLeft":
+    case "a":
         document.getElementById("move").setAttribute("x", 240)
         break;
-    case "ArrowRight":
+    case "d":
         // Right pressed
         break;
-    case "ArrowUp":
+    case "w":
         document.getElementById("move").setAttribute("y", 20)
         break;
-    case "ArrowDown":
+    case "s":
         document.getElementById("move").setAttribute("y", 480)
         break;
 	}

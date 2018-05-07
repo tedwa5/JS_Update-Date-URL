@@ -15,7 +15,7 @@ window.addEventListener('keydown', function(event)
 	var pony = document.getElementById("move"); 
       var ponyX =  Number(pony.getAttribute('x'));
       var ponyY =  Number(pony.getAttribute('y'));
-	explode(ponyY, ponyX);
+	var explosion = explode(ponyY, ponyX);
        var key = event.keyCode;
 	 console.log(key);
 	switch (key) 

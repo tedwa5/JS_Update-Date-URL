@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+<svg  id="movepony" height="500" width="1000"   style="border: 10px solid pink;">
+  <image id="move" xlink:href="https://m.media-amazon.com/images/S/aplus-media/sota/1c4d6642-dd6f-44b9-9900-bff32eb889ad.jpg" x="0" y="225" height="50px" width="50px"/>
+  Sorry, your browser does not support inline SVG.
+</svg> 
+<script>
+window.addEventListener('onkeydown', function(event)) {
+        key = event.key;
+	switch (event.key) 
+      {
+    case "ArrowLeft":
+        document.getElementById("move").setAttribute("x", 240)
+        break;
+    case "ArrowRight":
+        // Right pressed
+        break;
+    case "ArrowUp":
+        document.getElementById("move").setAttribute("y", 20)
+        break;
+    case "ArrowDown":
+        document.getElementById("move").setAttribute("y", 480)
+        break;
+	}
+   
+}
+}
+    
+</script>
+</body>
+</html>

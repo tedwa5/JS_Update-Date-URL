@@ -9,7 +9,6 @@
 </svg> 
 </div>
 <script>
-
 window.addEventListener('keydown', function(event)
 {
 	var pony = document.getElementById("move"); 
@@ -57,7 +56,7 @@ function explode()
       }
 }
 	
-function shitgenerator()
+function shitGenerator()
 	{
 	var random = Math.floor(Math.random() * 10);
 	var randomY = Math.floor((Math.random() + 25) * 475);
@@ -73,10 +72,10 @@ function shitgenerator()
 	svgimg.setAttributeNS(null,'y', randomY);
 	svgimg.setAttributeNS(null, 'visibility', 'visible');
 	svg.appendChild(svgimg);
-
 	}
+    }
 var explosion = setInterval(explode, 10);
-var shitplosion = setInterval(explode, 10);
+var shitplosion = setInterval(shitGenerator, 10);
 </script>
 </body>
 </html>

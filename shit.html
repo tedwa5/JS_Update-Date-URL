@@ -8,16 +8,14 @@
 </svg> 
 <script>
 var svg = document.getElementsByTagName('svg')[0]; 
-var newElement = document.createElementNS("http://www.w3.org/2000/svg", 'circle'); //Create a path in SVG's namespace
-newElement.setAttribute("cx","20"); 
-newElement.setAttribute("cy","20"); 
-newElement.setAttribute("r","20");
-newElement.style.stroke = "#000"; 
-newElement.style.strokeWidth = "5px"; 
-svg.appendChild(newElement);
-var im = document.createElementNS("http://www.w3.org/2000/svg", 'image');
-im=im.setAttributeNS( "http://www.w3.org/1999/xlink", "href","https://cdn.pixabay.com/photo/2016/12/18/20/01/emotions-1916662_960_720.png");
-svg.appendChild(im);
+var svgimg = document.createElementNS('http://www.w3.org/2000/svg','image');
+svgimg.setAttributeNS(null,'height','30');
+svgimg.setAttributeNS(null,'width','30');
+svgimg.setAttributeNS('http://www.w3.org/1999/xlink','href', 'https://cdn3.iconfinder.com/data/icons/object-emoji/50/Poop-512.png');
+svgimg.setAttributeNS(null,'x','10');
+svgimg.setAttributeNS(null,'y','10');
+svgimg.setAttributeNS(null, 'visibility', 'visible');
+svg.appendChild(svgimg);
 </script>
  
 </body>

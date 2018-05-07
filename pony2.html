@@ -8,9 +8,9 @@
 <script>
 window.addEventListener('keydown', move(event));
  function move(event){
-       var key = event.key;
+       var key = event.keyCode;
 	 console.log(key);
-	switch (event.key) 
+	switch (key) 
       {
     case "ArrowLeft":
         document.getElementById("move").setAttribute("x", 240)

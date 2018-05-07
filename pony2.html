@@ -39,6 +39,7 @@ function explode()
 	var pony = document.getElementById("move"); 
       var ponyX =  Number(pony.getAttribute('x'));
       var ponyY =  Number(pony.getAttribute('y'));
+	console.log(ponyX, ponyY);
 	if ( ponyY > 475 || ponyX > 975)               //pony explodes :D
       { 
        document.getElementById("move").setAttribute("xlink:href", 

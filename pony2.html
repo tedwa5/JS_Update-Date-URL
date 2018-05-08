@@ -56,11 +56,10 @@ function explode()
       }
 }
 	
-function shitGenerator()
-	{
+function generator(){
 	var random = Math.floor(Math.random() * 10);
-	var randomY = Math.floor((Math.random() + 25) * 475);
-	var randomX = Math.floor((Math.random() + 25) * 975);
+	var randomY = Math.floor((Math.random()*475) + 25);
+	var randomX = Math.floor((Math.random()*975) + 25);
 	//if (random == 1)
 	var svg = document.getElementsByTagName('svg')[0]; 
 	var svgimg = document.createElementNS('http://www.w3.org/2000/svg','image');
@@ -72,8 +71,8 @@ function shitGenerator()
 	svgimg.setAttributeNS(null, 'visibility', 'visible');
 	svg.appendChild(svgimg);
     }
+var shitplosion = setInterval(generator, 10);
 var explosion = setInterval(explode, 10);
-var shitplosion = setInterval(shitGenerator, 10);
 </script>
 </body>
 </html>

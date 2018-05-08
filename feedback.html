@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html>
 <body>
+<style>
+body {
+    background-color: #ddd;
+}
+div {
+    text-align: center;
+}
+</style>
+<div>
 <p>Please input Ebay search:</p>
 <input id="search">
 <button type="button" onclick="api()">Submit</button>
+  </div>
 <script>
 function api() {
   var search = document.getElementById('search').value.replace(/&_/g,"***"); //problem with &_ needs to be replaced

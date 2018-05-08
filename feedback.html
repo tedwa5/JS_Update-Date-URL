@@ -6,21 +6,21 @@
 <button type="button" onclick="api()">Submit</button>
 <script>
 function api() {
+  var search = document.getElementById('search').value.replace(/&_/g,"***"); //problem with &_ needs to be replaced
+  console.log(search);
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var json = JSON.parse(this.responseText);
-        var price = json.result.XETHZEUR.a;
-      var search = document.getElementById('search').value;
-      console.log(search);
+        var data = json.stringify;
       let csvContent = "data:text/csv;charset=utf-8,";
-        console.log(price)
-        csvContent += price;
+        console.log(data)
+        csvContent += data;
         var encodedUri = encodeURI(csvContent);
         window.open(encodedUri);
     }
   };
-  xhttp.open("GET", "https://api.kraken.com/0/public/Ticker?pair=XETHZEUR", true)
+  xhttp.open("GET", "http://baralaboratory.com/api/v1/crambax?search=" + search, true)
   xhttp.send();
 }
 </script>

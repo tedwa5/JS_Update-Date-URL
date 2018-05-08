@@ -22,7 +22,7 @@ function save(){
   console.log(search);
 var data = api();
 let csvContent = "data:text/csv;charset=utf-8,";
-csvContent += data;
+csvContent += data.toString();
 var encodedUri = encodeURI(csvContent);
 window.open(encodedUri);
 }

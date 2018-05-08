@@ -12,7 +12,7 @@ function api() {
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var json = JSON.parse(this.responseText);
-        var data = json.stringify;
+        var data = json.data;
       let csvContent = "data:text/csv;charset=utf-8,";
         console.log(data)
         csvContent += data;

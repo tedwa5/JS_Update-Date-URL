@@ -21,7 +21,8 @@ function save(){
  var search = document.getElementById('search').value;
   console.log(search);
 var data = api();
-var csvContent = data;
+let csvContent = "data:text/csv;charset=utf-8,";
+csvContent += data;
 var encodedUri = encodeURI(csvContent);
 window.open(encodedUri);
 }

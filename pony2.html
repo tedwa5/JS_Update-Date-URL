@@ -69,7 +69,7 @@ function generator(){
 	svgimg.setAttributeNS(null,'x', randomX.toString());
 	svgimg.setAttributeNS(null,'y', randomY.toString());
 	svgimg.setAttributeNS(null, 'visibility', 'visible');
-	svgimg.setAttributeNS(null, 'class', 'shit');
+	svgimg.setAttribute( 'class', 'shit');
 	console.log(svgimg.class)
 	svg.appendChild(svgimg);
     }

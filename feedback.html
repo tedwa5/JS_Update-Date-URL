@@ -3,7 +3,7 @@
 <body>
 <p>Please input Ebay search:</p>
 <input id="search">
-<button type="button" onclick="save()">Submit</button>
+<button type="button" onclick="api()">Submit</button>
 <script>
 function api() {
   var xhttp = new XMLHttpRequest();
@@ -11,20 +11,17 @@ function api() {
     if (this.readyState == 4 && this.status == 200) {
         var json = JSON.parse(this.responseText);
         var price = json.result.XETHZEUR.a;
-        return price;
+      var search = document.getElementById('search').value;
+      console.log(search);
+      let csvContent = "data:text/csv;charset=utf-8,";
+        console.log(data)
+        csvContent += data.toString();
+        var encodedUri = encodeURI(csvContent);
+        window.open(encodedUri);
     }
   };
   xhttp.open("GET", "https://api.kraken.com/0/public/Ticker?pair=XETHZEUR", true)
   xhttp.send();
-}
-function save(){
- var search = document.getElementById('search').value;
-  console.log(search);
-var data = api();
-let csvContent = "data:text/csv;charset=utf-8,";
-csvContent += data.toString();
-var encodedUri = encodeURI(csvContent);
-window.open(encodedUri);
 }
 </script>
 

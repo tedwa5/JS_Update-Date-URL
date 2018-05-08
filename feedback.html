@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <body>
-<div id="root"></div>
+<p>Please input Ebay search:</p>
+<input id="search">
+<button type="button" onclick="save()">Submit</button>
 <script>
 function api() {
   var xhttp = new XMLHttpRequest();
@@ -16,6 +18,8 @@ function api() {
   xhttp.send();
 }
 function save(){
+ var search = document.getElementById('search').value;
+  console.log(search);
 var data = api();
 var csvContent = data;
 var encodedUri = encodeURI(csvContent);

@@ -3,6 +3,7 @@
 <body>
 
 <div id="root"></div>
+<div id="root2"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
@@ -23,6 +24,23 @@ function api() {
 ReactDOM.render(
     <p>{api()}</p>,
     document.getElementById('root')
+);
+function api2() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var json = JSON.parse(this.responseText);
+        var price = json.some;
+        return price;
+    }
+  };
+  xhttp.open("GET", "http://www.baralaboratory.com/api/cors", true)
+  xhttp.send();
+}
+
+ReactDOM.render(
+    <p>{api2()}</p>,
+    document.getElementById('root2')
 );
 </script>
 

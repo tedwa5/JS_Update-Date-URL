@@ -30,7 +30,6 @@ function updateDate()
     var partOfLink = '&min_date=' +  year2 + '-' + month2  + '-' + day2 + '&max_date=' + year + '-' + month  + '-' + day
     var link = "http://www.foxnews.com/search-results/search?q=grassroots&ss=fn&start=0" + partOfLink
     var url = document.getElementById("link");
-    console.log(link)
     url.href = link
  }
 var myVar = setInterval(updateDate, 100);

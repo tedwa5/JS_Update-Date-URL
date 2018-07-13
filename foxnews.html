@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
 <body>
-<a id="link" href="http://www.foxnews.com/search-results/search?q=grassroots&ss=fn&min_date=2018-07-05&max_date=2018-07-12&start=0">FoxNews</a> 
 </body>
 <script>
 function updateDate()
-  /* function which after call updates #link 
+  /* function which after call generates redirection link
     please note that function works with UTC time, if you dont want UTC only remove UTC but note that every client can have 
     different results from this script because timezones
   */
@@ -23,7 +22,7 @@ function updateDate()
     array.forEach(checkZero);
     var partOfLink = '&min_date=' +  year2 + '-' + month2  + '-' + day2 + '&max_date=' + year + '-' + month  + '-' + day;
     var link = "http://www.foxnews.com/search-results/search?q=grassroots&ss=fn&start=0" + partOfLink;
-    document.getElementById("link").href = link;
+    window.location.replace(link);
   }
 	
 function checkZero(item)

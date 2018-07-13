@@ -7,11 +7,11 @@
 function updateDate()
   {
     var d = new Date();
-    var year = d.getUTCYear();
+    var year = d.getUTCFullYear();
     var month = d.getUTCMonth();
     var day = d.getUTCDay();
     d.setDate(d.getDate() - 7);
-    var year2 = d.getUTCYear();
+    var year2 = d.getUTCFullYear();
     var month2 = d.getUTCMonth();
     var day2 = d.getUTCDay();
     var partOfLink = '&min_date=' + year2 + '-' + month2  + '-' + day2 + '&max_date=' + year + '-' + month  + '-' + day

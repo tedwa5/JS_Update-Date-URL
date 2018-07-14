@@ -11,14 +11,14 @@ function updateDate()
   */
   {
     var d = new Date();
-    var year = d.getUTCFullYear();
-    var month = d.getUTCMonth() + 1;
-    var day = d.getUTCDate();
+    var year = d.getFullYear();
+    var month = d.getMonth() + 1;
+    var day = d.getDate();
     var d2 = new Date();
     d2.setDate(d2.getDate() - 7);
-    var year2 = d2.getUTCFullYear();
-    var month2 = d2.getUTCMonth() + 1;
-    var day2 = d2.getUTCDate();
+    var year2 = d2.getFullYear();
+    var month2 = d2.getMonth() + 1;
+    var day2 = d2.getDate();
     var array = [day, day2, month, month2];
     array.forEach(checkZero);
     var partOfLink = '&min_date=' +  year2 + '-' + month2  + '-' + day2 + '&max_date=' + year + '-' + month  + '-' + day;
